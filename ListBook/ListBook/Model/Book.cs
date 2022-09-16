@@ -8,7 +8,7 @@ namespace ListBook.Model
         [Key]
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="لطفا {0} را وارد کنید")]
         [MaxLength(300)]
         public string Name { get; set; }
 
@@ -17,8 +17,8 @@ namespace ListBook.Model
         public string Auther { get; set; }
 
 
-        [Required]
-        public DateTime CraeteDate { get; set; }
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
+        public DateTime CraeteDate { get; set; } = DateTime.Now;
 
         [MaxLength(400)] 
         public string ISBN { get; set; }

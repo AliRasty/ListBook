@@ -1,19 +1,20 @@
 ﻿@page
-@model ListBook.Pages.ListBooks.CreateBookModel
+@model ListBook.Pages.ListBooks.EditBookModel
 @{
 }
 <br />
 <h1 class="text-info">
-    اضافه کردن کتاب
+    ویرایش کتاب || "@Model.book.Name"
 </h1>
 <hr />
 <div class="border container " style="padding:30px">
     <form method="post">
         <div asp-validation-summary="All">
         </div>
+        <input type="hidden" asp-for="book.Id" />
         <div class="form-group row">
             <div class="col-4 text-right">
-                <label asp-for="Book.Name">
+                <label asp-for="book.Name">
 
                 </label>
                
@@ -21,35 +22,35 @@
                
             </div>
             <div class="col-6">
-                <input asp-for="Book.Name" />
-                 <span asp-validation-for="Book.Name"></span>
+                <input asp-for="book.Name" />
+                 <span asp-validation-for="book.Name"></span>
 
             </div>
             <div class="col-4 text-right">
-                <label asp-for="Book.Auther">
+                <label asp-for="book.Auther">
 
                 </label>
                 
             </div>
             <div class="col-6">
-                <input asp-for="Book.Auther" />
-                 <span asp-validation-for="Book.Auther"></span>
+                <input asp-for="book.Auther" />
+                 <span asp-validation-for="book.Auther"></span>
             </div>
             <div class="col-4 text-right">
-                <label asp-for="Book.ISBN">
+                <label asp-for="book.ISBN">
 
                 </label>
                  
             </div>
             <div class="col-6">
-                <input asp-for="Book.ISBN" />
-                <span asp-validation-for="Book.ISBN"></span>
+                <input asp-for="book.ISBN" />
+                <span asp-validation-for="book.ISBN"></span>
             </div>
             <div class="col-4 text-right">
                 
             </div>
             <div class="col-6">
-                <input class="btn btn-outline-success" type="submit" value="ذخیره" />
+                <input class="btn btn-outline-success" type="submit" value="ویرایش" />
                 <a class="btn btn-link" asp-page="Index">
                     بازگشت به لیست
                 </a>

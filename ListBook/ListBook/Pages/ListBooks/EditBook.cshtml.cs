@@ -4,24 +4,29 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ListBook.Pages.ListBooks
 {
-    public class CreateBookModel : PageModel
+    public class EditBookModel : PageModel
     {
+
         private ApplicationDbContext _context;
-        public CreateBookModel(ApplicationDbContext context)
+
+        public EditBookModel(ApplicationDbContext context)
         {
             _context = context;
+            
         }
-        [BindProperty]
-        public Book Book { get; set; }
-        public void OnGet()
-        {
 
+        [BindProperty]
+        public Book book { get; set; }
+        public void OnGet(int id)
+        {
+            book = _context.Books.Find(id);     
         }
+
         public IActionResult OnPost()
         {
             if (ModelState.IsValid)
             {
-                _context.Books.Add(Book);
+                _context.Update(book);
                 _context.SaveChanges();
                 return RedirectToPage("Index");
             }
