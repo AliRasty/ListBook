@@ -9,5 +9,7 @@ namespace ListBook.Model
         {
 
         }
+
+        public DbSet<Book> Books { get; set; }
     }
 }
