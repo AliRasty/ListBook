@@ -68,3 +68,4 @@ E:\ListBook\ListBook\ListBook\obj\Debug\net5.0\ListBook.pdb
 E:\ListBook\ListBook\ListBook\obj\Debug\net5.0\ListBook.genruntimeconfig.cache
 E:\ListBook\ListBook\ListBook\obj\Debug\net5.0\ref\ListBook.dll
 E:\ListBook\ListBook\ListBook\obj\Debug\net5.0\Razor\Pages\ListBooks\Index.cshtml.g.cs
+E:\ListBook\ListBook\ListBook\obj\Debug\net5.0\Razor\Pages\ListBooks\CreateBook.cshtml.g.cs

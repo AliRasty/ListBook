@@ -1,0 +1,48 @@
+﻿@page
+@model ListBook.Pages.ListBooks.CreateBookModel
+@{
+}
+<br />
+<h1 class="text-info">
+    اضافه کردن کتاب
+</h1>
+<hr />
+<div class="border container " style="padding:30px">
+    <form method="post">
+        <div class="form-group row">
+            <div class="col-4 text-right">
+                <label asp-for="Book.Name">
+
+                </label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Book.Name" />
+            </div>
+            <div class="col-4 text-right">
+                <label asp-for="Book.Auther">
+
+                </label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Book.Auther" />
+            </div>
+            <div class="col-4 text-right">
+                <label asp-for="Book.ISBN">
+
+                </label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Book.ISBN" />
+            </div>
+            <div class="col-4 text-right">
+                
+            </div>
+            <div class="col-6">
+                <input class="btn btn-outline-success" type="submit" value="ذخیره" />
+                <a class="btn btn-link" asp-page="Index">
+                    بازگشت به لیست
+                </a>
+            </div>
+        </div>
+    </form>
+</div>

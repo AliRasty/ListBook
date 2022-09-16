@@ -19,5 +19,8 @@ namespace ListBook.Model
 
         [Required]
         public DateTime CraeteDate { get; set; }
+
+        [MaxLength(400)] 
+        public string ISBN { get; set; }
     }
 }
