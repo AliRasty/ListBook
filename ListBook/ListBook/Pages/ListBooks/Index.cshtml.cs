@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ListBook.Pages.ListBooks
 {
@@ -20,6 +21,20 @@ namespace ListBook.Pages.ListBooks
         public void OnGet()
         {
             books = _context.Books.ToList();
+        }
+
+
+        public async Task<IActionResult> OnGetDelete(int id)
+        {
+            var book = _context.Books.Find(id);
+            if(book==null)
+                return NotFound();
+
+
+            _context.Books.Remove(book);
+            await _context.SaveChangesAsync();
+
+            return RedirectToPage("Index");
         }
     }
 }
